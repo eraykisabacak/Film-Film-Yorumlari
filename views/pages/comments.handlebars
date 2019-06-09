@@ -1,0 +1,21 @@
+
+
+<div class="card">
+    {{#if user}}
+    <a class="btn btn-success" href="/newComment" role="button">Yeni Yorum Ekle</a><br>
+    <a class="btn btn-success" href="/newMovie" role="button">Yeni Film Ekle</a>
+    {{/if}}
+    <h5 class="card-header">Comments</h5>
+    <div class="card-body">
+         {{#each comments}}
+             <h1 class="display-3">{{movieName}}</h1>
+             <p class="lead">{{movieComment}}</p>
+         {{else}}
+         <div class="alert alert-info">There is No Registered Comments</div>
+        {{/each}}    
+
+    </div>
+</div>
+{{#if user}}
+<h4 class="m-2">Aktif Kullanıcı : {{user.username}}</h4>
+{{/if}}

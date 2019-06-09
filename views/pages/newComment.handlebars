@@ -1,0 +1,31 @@
+<div class="card">
+
+    <h5 class="card-header">Add Comment</h5>
+    <div class="card-body">
+        <form action="/newComment" method="POST">
+
+
+            <div class="form-group">
+
+                <label for="movieName">Film</label>
+                <input type="text" name="movieName" id="movieName" class="form-control" placeholder="Movie" required>
+            </div>
+
+            <select name="fruit">                 
+                {{#each comments}}
+                <option value ="none">{{_id}}</option> 
+                {{else}}
+                <div class="alert alert-info">There is No Moive Users</div>
+                {{/each}}      
+            </select> 
+
+            <div class="form-group">
+
+                <label for="movieComment">Film Yorumu</label>
+                <input type="text" name="movieComment" id="movieComment" class="form-control" placeholder="Comment" required>
+            </div>
+            <button type="submit" class="btn btn-success btn-block">Yorum Ekle</button>
+        </form>
+    </div>
+
+</div>
